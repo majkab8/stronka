@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-family: "Reddit Mono", monospace;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.header > img {
+  height: 100%;
+  width: 40%;
+}
+
+.menu > a {
+  color: brown;
+  font-size: 24px;
+  padding: 20px;
+  border-right: 2px solid lightgray;
+}
+
+.menu > a:last-child {
+  border: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1%;
+}
+
+.left-column {
+  width: 100%;
+  font-size: 20px;
+}
+
+.middle-column {
+  width: 100%;
+  font-size: 20px;
+}
+
+.right-column {
+  width: 100%;
+  font-size: 20px;
+}
+
+.middle-column > .photos {
+  display: flex;
+  flex-wrap: wrap;
+  aspect-ratio: 2/1;
+}
+
+.middle-column > .photos img {
+  height: 50%;
+  width: 45%;
+  margin: 6px;
+}
+
+.footer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer > p {
+  color: white;
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .middle-column > .photos {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  .middle-column > .photos img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    position: relative;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu > a {
+    border-right: none;
+    border-bottom: 2px solid lightgray;
+  }
+}
+
+@media (max-width: 1000px) {
+  .menu > a:last-child {
+    border-bottom: 2px solid lightgray;
+  }
+}
